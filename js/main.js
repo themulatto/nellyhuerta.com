@@ -115,6 +115,7 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   const playAudio = () => {
+    audio.volume = 0.25;
     audio.play().then(() => {
       audioReady = true;
       setPlayUI(true);
@@ -147,24 +148,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* ════════════════════════════════════════════════
-     BOTÓN CORAZÓN CON localStorage
-     contador global persiste por dominio
-     like personal persiste por navegador
+     BOTÓN CORAZÓN
+     — contador GLOBAL compartido entre todos los visitantes
+       usando countapi.xyz (gratuito, sin backend)
+     — like personal persiste en localStorage del navegador
   ═════════════════════════════════════════════════ */
   const heartBtn   = document.getElementById('heart-btn');
   const heartCount = document.getElementById('heart-count');
-  const HEART_KEY  = 'nelly_heart_count';
   const LIKED_KEY  = 'nelly_heart_liked';
+  // Namespace único para este sitio en countapi
+  const COUNT_NS   = 'nellyhuerta.com';
+  const COUNT_KEY  = 'megusta';
 
-  let count = parseInt(localStorage.getItem(HEART_KEY) || '47', 10); // seed inicial
   let liked = localStorage.getItem(LIKED_KEY) === '1';
 
-  const renderHeart = () => {
-    heartCount.textContent = count >= 1000
-      ? (count / 1000).toFixed(1).replace('.0','') + 'k'
-      : count;
+  const renderHeart = (n) => {
+    if (n !== undefined) heartCount.textContent = n >= 1000
+      ? (n / 1000).toFixed(1).replace('.0','') + 'k'
+      : n;
     heartBtn.classList.toggle('liked', liked);
   };
+
+  // Cargar el conteo actual al iniciar
+  fetch(`https://api.countapi.xyz/get/${COUNT_NS}/${COUNT_KEY}`)
+    .then(r => r.json())
+    .then(d => renderHeart(d.value || 0))
+    .catch(() => renderHeart(0));
+
+  // Estado inicial del corazón (sin número hasta que carga la API)
   renderHeart();
 
   // Partículas volando
@@ -190,16 +201,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
   heartBtn.addEventListener('click', () => {
     if (!liked) {
-      liked = true; count++;
-      localStorage.setItem(HEART_KEY, count);
+      // Primer like: sumar en la API global
+      liked = true;
       localStorage.setItem(LIKED_KEY, '1');
       heartBtn.classList.add('pop');
       setTimeout(() => heartBtn.classList.remove('pop'), 350);
       launchParticles();
+      // Crear la clave si no existe, luego incrementar
+      fetch(`https://api.countapi.xyz/hit/${COUNT_NS}/${COUNT_KEY}`)
+        .then(r => r.json())
+        .then(d => renderHeart(d.value))
+        .catch(() => {});
     } else {
-      liked = false; count = Math.max(0, count-1);
-      localStorage.setItem(HEART_KEY, count);
+      // Quitar like: restar en la API
+      liked = false;
       localStorage.setItem(LIKED_KEY, '0');
+      fetch(`https://api.countapi.xyz/update/${COUNT_NS}/${COUNT_KEY}?amount=-1`)
+        .then(r => r.json())
+        .then(d => renderHeart(Math.max(0, d.value)))
+        .catch(() => {});
     }
     renderHeart();
   });

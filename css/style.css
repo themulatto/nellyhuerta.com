@@ -790,3 +790,16 @@ footer p { font-size: 0.76rem; }
   }
   #heart-icon { width: 22px; height: 22px; }
 }
+
+/* ── FIX: números con Cormorant no muestran "I" en vez de "1" ── */
+.hero-dato-numero,
+.enc-stat-num,
+.enc-rating-num,
+.enc-tooltip-num,
+.servicio-numero,
+.seccion-titulo,
+.acerca-cita,
+.enfoque-texto {
+  font-variant-numeric: lining-nums;
+  font-feature-settings: "lnum" 1;
+}
