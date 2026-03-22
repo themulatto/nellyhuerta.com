@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nelly Huerta | Psicóloga Clínica · Las Condes, Santiago</title>
+  <meta name="description" content="Psicoterapeuta familiar, Consultora y Facilitadora Organizacional. Atención individual, parejas y familias. Agenda tu hora en Encuadrado.">
+  <meta name="keywords" content="psicóloga, psicoterapia, pareja, familia, Santiago, Las Condes, terapia familiar, consultoría organizacional">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nelly Huerta | Psicóloga Clínica">
+  <meta property="og:description" content="Psicoterapeuta familiar y Consultora Organizacional. 5.0 ★ en Encuadrado · 97 evaluaciones.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.nellyhuerta.com">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div id="cursor"></div>
+
+  <!-- ═══ NAVEGACIÓN ═══ -->
+  <nav id="nav">
+    <a href="#hero" class="nav-logo">Nelly <span>Huerta</span></a>
+    <ul class="nav-links">
+      <li><a href="#acerca">Acerca de mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#encuadrado-section">Agenda</a></li>
+      <li><a href="#contacto" class="nav-cta">Contacto</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Menú móvil -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#acerca"             onclick="closeMobile()">Acerca de mí</a>
+    <a href="#servicios"          onclick="closeMobile()">Servicios</a>
+    <a href="#encuadrado-section" onclick="closeMobile()">Agenda tu hora</a>
+    <a href="#contacto"           onclick="closeMobile()" style="color:var(--fucsia);font-weight:500;">Contacto</a>
+  </div>
+
+  <!-- ═══ HERO ═══ -->
+  <section id="hero">
+    <div class="hero-imagen">
+      <img src="images/RETRATO_EXPRESS_NELLY_EN26-7.jpg"
+           alt="Nelly Huerta, Psicóloga Clínica"
+           loading="eager">
+      <div class="hero-overlay"></div>
+
+      <!-- Badge ubicación -->
+      <div class="hero-badge">📍 Las Condes · Santiago</div>
+
+      <!-- Badge Encuadrado flotante con hover tooltip -->
+      <div class="enc-preview-trigger">
+        <a href="https://encuadrado.com/p/nelly-huerta"
+           target="_blank" rel="noopener"
+           class="hero-encuadrado-badge">
+          <div>
+            <div class="hero-enc-stars">★★★★★</div>
+            <div class="hero-enc-info">
+              <strong>5.0 · 97 evaluaciones</strong>
+              Profesional verificada
+            </div>
+            <div class="hero-enc-logo">encuadrado</div>
+          </div>
+        </a>
+        <!-- Tooltip preview -->
+        <div class="enc-preview-tooltip">
+          <div class="enc-tooltip-header">
+            <div class="enc-tooltip-avatar">
+              <img src="images/RETRATO_EXPRESS_NELLY_EN26.jpg" alt="Nelly Huerta">
+            </div>
+            <div>
+              <div class="enc-tooltip-name">Nelly Huerta</div>
+              <div class="enc-tooltip-sub">Psicóloga Clínica · Las Condes</div>
+            </div>
+          </div>
+          <div class="enc-tooltip-body">
+            <div class="enc-tooltip-rating">
+              <span class="enc-tooltip-stars">★★★★★</span>
+              <span class="enc-tooltip-num">5.0</span>
+              <span class="enc-tooltip-reviews">97 evaluaciones</span>
+            </div>
+            <blockquote class="enc-tooltip-quote">
+              "Siempre un agrado aclarar la mente con Nelly, la mejor atención siempre"
+            </blockquote>
+            <div class="enc-tooltip-service">
+              <span class="enc-tooltip-service-name">Atención Psicológica · Online</span>
+              <span class="enc-tooltip-price">$50.000 CLP</span>
+            </div>
+          </div>
+          <div class="enc-tooltip-footer">
+            <a href="https://encuadrado.com/p/nelly-huerta"
+               target="_blank" class="enc-tooltip-cta">
+              Agendar hora →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-texto">
+      <span class="hero-eyebrow">Psicología clínica · Familia · Organizaciones</span>
+      <h1 class="hero-titulo">
+        Nelly<br><em>Huerta</em>
+      </h1>
+      <p class="hero-subtitulo">
+        Psicoterapeuta familiar, Consultora<br>y Facilitadora Organizacional
+      </p>
+      <p class="hero-descripcion">
+        Acompaño a personas, parejas, familias y organizaciones en sus procesos de transformación — desde un espacio de escucha profunda, preguntas reflexivas y genuino compromiso con tu bienestar.
+      </p>
+      <div class="hero-acciones">
+        <a href="https://encuadrado.com/p/nelly-huerta"
+           target="_blank" rel="noopener"
+           class="btn-primary">
+          Agendar una hora
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#acerca" class="btn-secondary">Conocerme →</a>
+      </div>
+      <div class="hero-datos">
+        <div>
+          <div class="hero-dato-numero">12<span>+</span></div>
+          <div class="hero-dato-label">años experiencia</div>
+        </div>
+        <div>
+          <div class="hero-dato-numero">5<span>.0</span></div>
+          <div class="hero-dato-label">rating Encuadrado</div>
+        </div>
+        <div>
+          <div class="hero-dato-numero">97</div>
+          <div class="hero-dato-label">evaluaciones</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ ACERCA DE MÍ ═══ -->
+  <section id="acerca">
+    <div class="acerca-imagenes">
+      <img src="images/RETRATO_EXPRESS_NELLY_EN26-24.jpg" alt="Nelly Huerta">
+      <div class="acerca-foto-mini">
+        <img src="images/RETRATO_EXPRESS_NELLY_EN26-37.jpg" alt="Nelly Huerta">
+      </div>
+    </div>
+    <div class="acerca-texto">
+      <span class="seccion-eyebrow">Acerca de mí</span>
+      <h2 class="seccion-titulo">Una historia de<br><em>preguntas que cambian vidas</em></h2>
+
+      <blockquote class="acerca-cita">
+        "A los 16 años me di cuenta que las conversaciones podían cambiar el emocionar de otros — que basta que nos sintamos vistos para creer en nosotros mismos."
+      </blockquote>
+
+      <p>Soy una amante de las diferencias, de los distintos modos de vida y las culturas. Cada persona, pareja, familia o grupo que acompaño es un viaje a una nueva realidad — me desconecto automáticamente de mi propia vida para estar completamente presente.</p>
+
+      <p>Trabajo con hombres y mujeres proactivos en su desarrollo personal que desean mejorar sus relaciones personales y/o laborales para sentirse en mayor bienestar.</p>
+
+      <div class="credenciales">
+        <div class="credencial reveal">
+          <div class="credencial-icono">🎓</div>
+          <div class="credencial-texto">
+            <strong>Psicóloga Clínica · Postítulo Terapia Estratégica Breve</strong>
+            Formación clínica especializada en intervención terapéutica
+          </div>
+        </div>
+        <div class="credencial reveal">
+          <div class="credencial-icono">📚</div>
+          <div class="credencial-texto">
+            <strong>Magíster en Biología-Cultural</strong>
+            Comprensión sistémica del ser humano en su contexto
+          </div>
+        </div>
+        <div class="credencial reveal">
+          <div class="credencial-icono">🌐</div>
+          <div class="credencial-texto">
+            <strong>ICCP — Instituto Galveston, Texas, EEUU</strong>
+            Certificación Internacional en Prácticas Colaborativas y Dialógicas
+          </div>
+        </div>
+        <div class="credencial reveal">
+          <div class="credencial-icono">✓</div>
+          <div class="credencial-texto">
+            <strong>Profesional verificada · Reg. 108463</strong>
+            Superintendencia de Salud de Chile
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ SERVICIOS ═══ -->
+  <section id="servicios">
+    <div class="servicios-intro reveal">
+      <span class="seccion-eyebrow">Servicios</span>
+      <h2 class="seccion-titulo">Tres formas de<br><em>acompañarte</em></h2>
+      <p>Trabajo con sistemas tanto organizacionales como familiares que buscan desarrollar su potencial o atraviesan momentos de transformación. Mi acompañamiento crea espacios de conversación genuina donde emergen nuevas posibilidades.</p>
+    </div>
+    <div class="servicios-grid">
+      <div class="servicio-card reveal">
+        <div class="servicio-numero">01</div>
+        <h3 class="servicio-titulo">Psicoterapia de Pareja y Familiar</h3>
+        <p class="servicio-texto">Acompaño familias que desean desarrollar nuevas habilidades para tener relaciones más saludables y sentirse en bienestar. Atención individual a adultos, parejas y familias. También trabajo con adolescentes en contexto de terapia familiar. Especialización en familias ensambladas.</p>
+        <div class="servicio-tags">
+          <span class="tag">Sistémica</span>
+          <span class="tag">Narrativa</span>
+          <span class="tag">Estratégica Breve</span>
+          <span class="tag">Familias ensambladas</span>
+        </div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-numero">02</div>
+        <h3 class="servicio-titulo">Consultora Organizacional</h3>
+        <p class="servicio-texto">12 años de experiencia en Organizaciones Públicas y Privadas: clima organizacional, desarrollo de liderazgo, evaluación de desempeño, gestión del cambio (SAP) y programas de transformación cultural (Seguridad, Ética y Ley 20.393). Me destaco por co-construir soluciones con mis clientes.</p>
+        <div class="servicio-tags">
+          <span class="tag">Liderazgo</span>
+          <span class="tag">Clima Org.</span>
+          <span class="tag">Transformación</span>
+          <span class="tag">Coaching</span>
+        </div>
+      </div>
+      <div class="servicio-card reveal">
+        <div class="servicio-numero">03</div>
+        <h3 class="servicio-titulo">Facilitadora</h3>
+        <p class="servicio-texto">Acompaño equipos en sus procesos de transformación con talleres que incorporan nuevas distinciones en sus formas de relacionarse y comunicarse. He realizado talleres de comunicación, liderazgo, feedback, resolución de conflictos, habilidades parentales y salud mental.</p>
+        <div class="servicio-tags">
+          <span class="tag">Talleres</span>
+          <span class="tag">Equipos</span>
+          <span class="tag">Comunicación</span>
+          <span class="tag">Colegios</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FRANJA DE FOTOS ═══ -->
+  <div id="franja">
+    <div class="franja-foto">
+      <img src="images/RETRATO_EXPRESS_NELLY_EN26-44.jpg" alt="Nelly Huerta">
+    </div>
+    <div class="franja-foto">
+      <img src="images/RETRATO_EXPRESS_NELLY_EN26-14.jpg" alt="Nelly Huerta">
+    </div>
+    <div class="franja-foto">
+      <img src="images/RETRATO_EXPRESS_NELLY_EN26-54.jpg" alt="Nelly Huerta">
+    </div>
+  </div>
+
+  <!-- ═══ ENCUADRADO — AGENDA ═══ -->
+  <section id="encuadrado-section">
+    <div class="enc-layout">
+
+      <!-- Texto izquierdo -->
+      <div class="enc-left">
+        <span class="seccion-eyebrow">Agenda tu hora</span>
+        <h2 class="seccion-titulo">Reserva tu sesión<br><em>de forma simple y segura</em></h2>
+        <p>
+          Utilizo <strong>Encuadrado</strong>, la plataforma de salud mental más completa de Chile. Puedes agendar tu sesión online, pagar con tarjeta o transferencia, y recibir confirmación inmediata.
+        </p>
+        <p>
+          Mi atención es principalmente <strong>online</strong>, lo que te permite conectar desde donde estés, en un espacio cómodo y sin traslados.
+        </p>
+        <div class="enc-stats">
+          <div>
+            <div class="enc-stat-num">5<span>.0</span></div>
+            <div class="enc-stat-label">Rating promedio</div>
+          </div>
+          <div>
+            <div class="enc-stat-num">97</div>
+            <div class="enc-stat-label">Evaluaciones</div>
+          </div>
+          <div>
+            <div class="enc-stat-num">$50<span>k</span></div>
+            <div class="enc-stat-label">Por sesión (CLP)</div>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem; display:flex; gap:1rem; flex-wrap:wrap; align-items:center;">
+          <a href="https://encuadrado.com/p/nelly-huerta"
+             target="_blank" rel="noopener"
+             class="btn-primary">
+            Ver disponibilidad →
+          </a>
+          <!-- Hover preview también en botón -->
+          <div class="enc-preview-trigger">
+            <a href="https://encuadrado.com/p/nelly-huerta"
+               target="_blank" rel="noopener"
+               class="btn-secondary">
+              Ver perfil en Encuadrado ↗
+            </a>
+            <div class="enc-preview-tooltip" style="bottom:auto;top:calc(100% + 12px);">
+              <div class="enc-tooltip-header">
+                <div class="enc-tooltip-avatar">
+                  <img src="images/RETRATO_EXPRESS_NELLY_EN26.jpg" alt="Nelly Huerta">
+                </div>
+                <div>
+                  <div class="enc-tooltip-name">Nelly Huerta</div>
+                  <div class="enc-tooltip-sub">Psicóloga Clínica · Las Condes</div>
+                </div>
+              </div>
+              <div class="enc-tooltip-body">
+                <div class="enc-tooltip-rating">
+                  <span class="enc-tooltip-stars">★★★★★</span>
+                  <span class="enc-tooltip-num">5.0</span>
+                  <span class="enc-tooltip-reviews">97 evaluaciones</span>
+                </div>
+                <blockquote class="enc-tooltip-quote">
+                  "Excelente profesional. Muy empática, asertiva y profesional. La recomiendo 1000%!"
+                </blockquote>
+                <div class="enc-tooltip-service">
+                  <span class="enc-tooltip-service-name">Atención Online</span>
+                  <span class="enc-tooltip-price">$50.000 CLP</span>
+                </div>
+              </div>
+              <div class="enc-tooltip-footer">
+                <a href="https://encuadrado.com/p/nelly-huerta"
+                   target="_blank" class="enc-tooltip-cta">
+                  Agendar hora →
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Encuadrado -->
+      <div class="enc-card reveal">
+        <div class="enc-card-header">
+          <div class="enc-avatar">
+            <img src="images/RETRATO_EXPRESS_NELLY_EN26.jpg" alt="Nelly Huerta">
+          </div>
+          <div>
+            <div class="enc-prof-name">Nelly Huerta</div>
+            <div class="enc-prof-titulo">Psicóloga Clínica · Las Condes, Santiago</div>
+          </div>
+          <div class="enc-verified">✓ Verificada</div>
+        </div>
+
+        <div class="enc-card-rating">
+          <span class="enc-stars">★★★★★</span>
+          <span class="enc-rating-num">5.0</span>
+          <span class="enc-rating-count">97 evaluaciones</span>
+        </div>
+
+        <div class="enc-reviews">
+          <p class="enc-reviews-title">Lo que dicen mis consultantes</p>
+          <div id="encReviewSlides"><!-- JS injection --></div>
+          <div id="encReviewDots" class="enc-review-dots"></div>
+        </div>
+
+        <div class="enc-card-service">
+          <div class="enc-service-name">Atención Psicológica — Online</div>
+          <div class="enc-service-meta">
+            <span class="enc-service-detail">⏱ 50 min</span>
+            <span class="enc-service-detail">💻 Online</span>
+            <span class="enc-service-price">$50.000 CLP</span>
+          </div>
+        </div>
+
+        <div class="enc-card-footer">
+          <a href="https://encuadrado.com/p/nelly-huerta"
+             target="_blank" rel="noopener"
+             class="enc-btn-agendar">
+            📅 Agendar ahora
+          </a>
+          <a href="https://encuadrado.com/p/nelly-huerta"
+             target="_blank" rel="noopener"
+             class="enc-btn-ver"
+             title="Ver perfil completo">↗</a>
+        </div>
+        <div class="enc-powered">
+          Agenda segura con <a href="https://encuadrado.com" target="_blank" rel="noopener">encuadrado.com</a>
+          · Tarjeta, débito o transferencia
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MI ENFOQUE ═══ -->
+  <section id="enfoque">
+    <div class="enfoque-inner">
+      <span class="seccion-eyebrow">Mi propuesta</span>
+      <h2 class="seccion-titulo">Un espacio donde<br><em>tú eres el protagonista</em></h2>
+      <p class="enfoque-texto">
+        "Acompañar a sistemas organizacionales y familiares que se encuentran en espacios de incomodidad o que desean desarrollar todo su potencial humano. Crear conversaciones que abran otras posibilidades."
+      </p>
+      <div class="enfoque-pilares">
+        <div class="reveal">
+          <p class="pilar-titulo">Preguntas reflexivas</p>
+          <p class="pilar-texto">Mi acompañamiento es principalmente a través de preguntas que ayudan a revisar tu rol en las dinámicas que generan malestar, siempre desde situaciones concretas del presente.</p>
+        </div>
+        <div class="reveal">
+          <p class="pilar-titulo">Espacio sin juicios</p>
+          <p class="pilar-texto">No me identifico con las polaridades. Trabajo en estar atenta a mis propias creencias para generar un espacio amoroso y compasivo donde puedas descubrir tu propio camino.</p>
+        </div>
+        <div class="reveal">
+          <p class="pilar-titulo">Autonomía y cambio real</p>
+          <p class="pilar-texto">Mi propósito es movilizar espacios de mayor autonomía en la toma de decisiones y facilitar cambios concretos en la manera de conducirse en la vida y las relaciones.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TESTIMONIOS ═══ -->
+  <section id="testimonios">
+    <span class="seccion-eyebrow">Evaluaciones reales · Encuadrado</span>
+    <h2 class="seccion-titulo">Lo que dicen quienes<br><em>han transitado el camino</em></h2>
+    <div class="testimonios-grid">
+      <div class="testimonio reveal">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-texto">Siempre un agrado aclarar la mente con Nelly, la mejor atención siempre.</p>
+        <p class="testimonio-autor">Anónima · <span>Hace 3 días</span></p>
+      </div>
+      <div class="testimonio reveal">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-texto">Excelente profesional, muy comprometida.</p>
+        <p class="testimonio-autor">Anónima · <span>Agosto 2025</span></p>
+      </div>
+      <div class="testimonio reveal">
+        <div class="testimonio-stars">★★★★★</div>
+        <p class="testimonio-texto">Excelente profesional. Muy empática, asertiva y profesional. La recomiendo 1000%!</p>
+        <p class="testimonio-autor">Yolimar Ramírez · <span>Febrero 2025</span></p>
+      </div>
+      <div class="testimonio reveal" style="display:flex;align-items:center;justify-content:center;background:var(--fucsia-pale);border:1px dashed var(--fucsia);">
+        <div style="text-align:center;padding:1rem;">
+          <div style="font-family:'Cormorant Garamond',serif;font-size:2.5rem;font-weight:300;color:var(--fucsia);line-height:1;">97</div>
+          <div style="font-size:0.8rem;color:var(--texto-suave);margin:0.3rem 0 1rem;">evaluaciones verificadas</div>
+          <a href="https://encuadrado.com/p/nelly-huerta"
+             target="_blank" rel="noopener"
+             style="font-size:0.78rem;color:var(--fucsia);text-decoration:none;border-bottom:1px solid var(--fucsia);">
+            Ver todas en Encuadrado →
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACTO ═══ -->
+  <section id="contacto">
+    <div class="contacto-imagen">
+      <img src="images/RETRATO_EXPRESS_NELLY_EN26-44.jpg" alt="Nelly Huerta">
+    </div>
+    <div class="contacto-texto">
+      <span class="seccion-eyebrow">Contacto</span>
+      <h2 class="seccion-titulo">¿Lista/o para<br><em>dar el primer paso?</em></h2>
+      <p>Si crees que puedo acompañarte en tu proceso — personal, de pareja, familiar u organizacional — escríbeme. La primera conversación no compromete nada.</p>
+
+      <div class="contacto-info">
+        <div class="contacto-item">
+          <div class="contacto-icono">📧</div>
+          <a href="#" data-email data-show-email>Cargando...</a>
+        </div>
+        <div class="contacto-item">
+          <div class="contacto-icono">📱</div>
+          <a href="tel:+56994383603">+56 9 9438 3603</a>
+        </div>
+        <div class="contacto-item">
+          <div class="contacto-icono">📍</div>
+          <span>Las Condes, Santiago · También online</span>
+        </div>
+        <div class="contacto-item">
+          <div class="contacto-icono">🌐</div>
+          <a href="https://encuadrado.com/p/nelly-huerta" target="_blank" rel="noopener">
+            encuadrado.com/p/nelly-huerta
+          </a>
+        </div>
+      </div>
+
+      <div class="contacto-acciones">
+        <a href="https://encuadrado.com/p/nelly-huerta"
+           target="_blank" rel="noopener"
+           class="btn-primary" style="width:fit-content;">
+          📅 Agendar hora en Encuadrado
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#" id="agendarBtn" class="btn-secondary" style="width:fit-content;">
+          O escríbeme por email →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer>
+    <div class="footer-logo">Nelly <span>Huerta</span> · Ps.</div>
+    <ul class="footer-links">
+      <li><a href="#acerca">Acerca de mí</a></li>
+      <li><a href="#servicios">Servicios</a></li>
+      <li><a href="#encuadrado-section">Agenda</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+    <p>© 2025 Nelly Huerta, Ph.D.</p>
+  </footer>
+
+  <!-- ═══ MUSIC PLAYER — BOTÓN CIRCULAR FLOTANTE ═══ -->
+  <div id="music-player">
+    <span class="mp-hint" id="mpHint">♪</span>
+    <button id="mp-toggle" aria-label="Reproducir / Pausar música">
+      <svg id="mp-icon-play"  width="18" height="18" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+      <svg id="mp-icon-pause" width="18" height="18" viewBox="0 0 24 24" style="display:none;"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+    </button>
+    <audio id="bgAudio" loop preload="none">
+      <source src="audio/tramayDesenlace.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <!-- ═══ BOTÓN CORAZÓN ═══ -->
+  <button id="heart-btn" aria-label="Me gusta este sitio">
+    <svg id="heart-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5
+               2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09
+               C13.09 3.81 14.76 3 16.5 3
+               19.58 3 22 5.42 22 8.5
+               c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    <span id="heart-count">0</span>
+  </button>
+
+  <!-- JS -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
