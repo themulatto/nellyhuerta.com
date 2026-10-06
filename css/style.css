@@ -296,6 +296,35 @@ nav.scrolled {
   letter-spacing: 0.04em; font-weight: 500;
 }
 
+/* ── FAMILIAS ENSAMBLADAS (puente al subsitio, paleta del manual) ── */
+.servicio-link {
+  display: inline-block; margin-top: 1.2rem;
+  font-size: 0.85rem; font-weight: 500; color: var(--navy);
+  text-decoration: underline; text-decoration-color: var(--fucsia);
+  text-underline-offset: 4px;
+}
+.servicio-link:hover { color: var(--fucsia); }
+#ensambladas {
+  background: #f6f2ec;
+  padding: 6rem 5%;
+  display: grid; grid-template-columns: 1fr 1.05fr; gap: 4rem; align-items: center;
+}
+#ensambladas .seccion-eyebrow { color: #a9502f; }
+#ensambladas .seccion-titulo { color: #1e3c35; }
+#ensambladas .seccion-titulo em { color: #a9502f; }
+#ensambladas p { font-size: 0.95rem; color: #55615c; line-height: 1.9; margin-bottom: 2rem; max-width: 34rem; }
+#ensambladas .btn-primary { background: #1e3c35; box-shadow: none; }
+#ensambladas .btn-primary:hover { background: #2f5449; }
+.ens-ilustracion {
+  width: 100%; height: auto; mix-blend-mode: multiply;
+  -webkit-mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 62%, transparent 100%);
+          mask-image: radial-gradient(ellipse 72% 70% at 50% 52%, #000 62%, transparent 100%);
+}
+@media (max-width: 768px) {
+  #ensambladas { grid-template-columns: 1fr; gap: 2rem; padding: 4.5rem 6%; }
+  .ens-ilustracion { order: -1; }
+}
+
 /* ── FRANJA FOTOS ── */
 #franja {
   height: 460px; display: grid;

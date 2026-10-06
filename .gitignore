@@ -1,0 +1,9 @@
+# Documentos privados (no publicar: el repo es público)
+*.pdf
+*.pptx
+*.zip
+gen_pitch.py
+nelly-huerta-standalone.html
+blendedfamilies.mp4
+blendedfamilies_transcript.txt
+.DS_Store
